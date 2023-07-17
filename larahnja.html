@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Surpresa do fravito</title>
+	<style>
+		body {
+			background-color: orange;			
+			background-repeat: repeat;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.button {
+			background-color: white;
+			border: none;
+			color: orange;
+			padding: 10px 20px;
+			font-size: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		#birthdayEffect {
+			display: none;
+			animation: fadeInRotate 1s;
+			position: relative;
+		}
+
+		@keyframes fadeInRotate {
+			from { opacity: 0; transform: rotate(0deg); }
+			to { opacity: 1; transform: rotate(360deg); }
+		}
+
+		#birthdayEffect img {
+			max-width: 100%;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+
+		.message {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 24px;
+			z-index: 1;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button class="button" onclick="showBirthdayEffect()">Clique aqui para ver uma surpresa!</button>
+		<div id="birthdayEffect">
+			<p class="message" id="birthdayMessage">
+				Feliz Aniversário, meu amor!<br>
+				Você é a minha doce tortinha de limão e metade da minha laranja! Você é extremamente especial para mim e eu desejo ver o seu sorriso brilhando sempre!<br>
+				Você é uma mulher incrível, divertida, linda, inteligente, gótica rabuda e eu vou estar sempre do seu lado em todos os momentos!<br>
+				Minha vida é extremamente melhor com você junto!<br>
+				E eu te amo muito, muito, muito, muito!!!
+				Aproveite seu dia!!
+				Bjs,
+				Fravito &#x2764;
+			</p>		
+			<img src="1.png" alt="Foto">
+		</div>
+	</div>
+
+	<script>
+		function showBirthdayEffect() {
+			var birthdayEffect = document.getElementById("birthdayEffect");
+			birthdayEffect.style.display = "block";
+
+			var birthdayMessage = document.getElementById("birthdayMessage");
+			birthdayMessage.style.display = "block";
+		}
+	</script>
+</body>
+</html>
